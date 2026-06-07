@@ -21,11 +21,11 @@ GaussMatrix load_csv_to_matrix(const char *filename)
     }
 
     GaussMatrix mat(rcsv.size(), rcsv.empty() ? 0 : rcsv[0].size());
-    
+
     for (size_t i = 0; i < rcsv.size(); ++i)
         for (size_t j = 0; j < rcsv[i].size(); ++j)
             mat(i, j) = rcsv[i][j];
-    
+
     return mat;
 }
 
